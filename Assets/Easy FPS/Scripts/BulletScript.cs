@@ -28,9 +28,9 @@ public class BulletScript : MonoBehaviour {
 					Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
 					Destroy(gameObject);
 				}
-				if(hit.transform.tag == "Dummie"){
-					Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-					Destroy(gameObject);
+				if(hit.transform.tag == "Zombie"){
+                	ZombieController hitZombie = hit.transform.gameObject.GetComponent<ZombieController>();
+                	hitZombie.ZombieDeath();
 				}
 			}		
 			Destroy(gameObject);
