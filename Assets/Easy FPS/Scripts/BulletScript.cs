@@ -32,6 +32,10 @@ public class BulletScript : MonoBehaviour {
                 	ZombieController hitZombie = hit.transform.gameObject.GetComponent<ZombieController>();
                 	hitZombie.ZombieDeath();
 				}
+				if(hit.transform.tag == "ItemZombie"){
+                	ItemZombieController hitZombie1 = hit.transform.gameObject.GetComponent<ItemZombieController>();
+                	hitZombie1.ZombieDeath();
+				}
 			}		
 			Destroy(gameObject);
 		}

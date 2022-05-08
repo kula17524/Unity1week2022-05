@@ -82,8 +82,9 @@ public class ZombieController : MonoBehaviour
     {
         if (target != null)
         {
-            target.GetComponent<FPSController>().TakeHit(attackDamage);
             audioSource.PlayOneShot(attackSound);
+            target.GetComponent<FPSController>().TakeHit(attackDamage);
+            
         }
     }
 
@@ -93,7 +94,7 @@ public class ZombieController : MonoBehaviour
         animator.SetBool("Death", true);
         audioSource.PlayOneShot(deathSound);
         state = STATE.DEAD;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2.5f);
     }
 
     // Update is called once per frame

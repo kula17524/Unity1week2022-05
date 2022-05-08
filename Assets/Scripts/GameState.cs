@@ -9,6 +9,7 @@ public class GameState : MonoBehaviour
     public static bool canShoot;
 
     public static bool GameOver = false;
+    public static bool GameClear = false;
     public void Start() {
         GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
     }
