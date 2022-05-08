@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Zombie
   - HPBer
+  - Field
   layers:
   - Default
   - TransparentFX

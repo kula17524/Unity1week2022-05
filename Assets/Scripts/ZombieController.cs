@@ -55,7 +55,7 @@ public class ZombieController : MonoBehaviour
     // プレイヤーが近くにいると発見
     bool canSeePlayer()
     {
-        if (DistanceToPlayer() < 10)
+        if (DistanceToPlayer() < 15)
         {
             return true;
         }
@@ -66,7 +66,7 @@ public class ZombieController : MonoBehaviour
     // プレイヤーが離れると見失う
     bool ForgetPlayer()
     {
-        if (DistanceToPlayer() > 15)
+        if (DistanceToPlayer() > 20)
         {
             return true;
         }
@@ -87,6 +87,7 @@ public class ZombieController : MonoBehaviour
         TurnOffTrigger();
         animator.SetBool("Death", true);
         state = STATE.DEAD;
+        Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame

@@ -2313,7 +2313,7 @@ GameObject:
   - component: {fileID: 1708633905126614999}
   m_Layer: 0
   m_Name: zombiegirl_w_kurniawan
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2407,4 +2407,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 1
   runSpeed: 1.25
-  attackDamage: 0
+  attackDamage: 1
