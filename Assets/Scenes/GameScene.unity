@@ -511,6 +511,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 82190838427811640, guid: c391f12a928274acab8576bb6030641d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb859d907317d2446a59ffdeb1807e15, type: 3}
+    - target: {fileID: 82248981901151284, guid: c391f12a928274acab8576bb6030641d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3519e1b49b777a34d8674238d3c71350, type: 3}
+    - target: {fileID: 82378112336842120, guid: c391f12a928274acab8576bb6030641d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 258857b6c358d0644a339892e0212203, type: 3}
     - target: {fileID: 1860698047360386488, guid: c391f12a928274acab8576bb6030641d, type: 3}
       propertyPath: m_LocalScale.x
       value: 100
@@ -3213,6 +3225,18 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1589877057}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+      propertyPath: RainIntensity
+      value: 0.405
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+      propertyPath: RainMistThreshold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19928108, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 19948124, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -3796,7 +3820,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

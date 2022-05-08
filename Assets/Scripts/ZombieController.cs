@@ -7,6 +7,9 @@ public class ZombieController : MonoBehaviour
 {
     Animator animator;
     NavMeshAgent agent;
+    public AudioSource audioSource;
+    public AudioClip attackSound;
+    public AudioClip deathSound;
 
     // 移動スピード
     public float walkingSpeed = 1f;
@@ -25,6 +28,7 @@ public class ZombieController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
 
         // プレイヤーをターゲットとする
         if(target == null)
@@ -55,7 +59,7 @@ public class ZombieController : MonoBehaviour
     // プレイヤーが近くにいると発見
     bool canSeePlayer()
     {
-        if (DistanceToPlayer() < 15)
+        if (DistanceToPlayer() < 10)
         {
             return true;
         }
@@ -66,7 +70,7 @@ public class ZombieController : MonoBehaviour
     // プレイヤーが離れると見失う
     bool ForgetPlayer()
     {
-        if (DistanceToPlayer() > 20)
+        if (DistanceToPlayer() > 15)
         {
             return true;
         }
@@ -79,6 +83,7 @@ public class ZombieController : MonoBehaviour
         if (target != null)
         {
             target.GetComponent<FPSController>().TakeHit(attackDamage);
+            audioSource.PlayOneShot(attackSound);
         }
     }
 
@@ -86,6 +91,7 @@ public class ZombieController : MonoBehaviour
     {
         TurnOffTrigger();
         animator.SetBool("Death", true);
+        audioSource.PlayOneShot(deathSound);
         state = STATE.DEAD;
         Destroy(gameObject, 3f);
     }
