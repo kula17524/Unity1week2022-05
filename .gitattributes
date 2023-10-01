@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Assets/Font/Noto_Sans_JP/NotoSansJP-Light filter=lfs diff=lfs merge=lfs -text
+SDF.asset filter=lfs diff=lfs merge=lfs -text
+Assets/Font/Noto_Sans_JP/NotoSansJP-Light[[:space:]]SDF.asset filter=lfs diff=lfs merge=lfs -text
